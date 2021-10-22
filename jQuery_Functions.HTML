@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="jQuery Functions" content="Testing jQuery functions on a webpage.">
+    <title>jQuery Functions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="jQuery_Functions.css">
+
+    <script>
+        $(document).ready(function () {
+            $('button.click').click(function () {
+                $('div.box1').fadeOut(1000)
+            });
+            $('button.click').click(function() {
+                $('button.click').hide()
+                $('p.hidden').hide()
+            });
+            $('button.click').click(function() {
+                $('button.click_after').show()
+                $('button.click_after').show()
+            });
+            $('button.click_after').click(function() {
+                $('div.box1').fadeIn(1000)
+                $('button.click_after').hide()
+                $('button.click3').show()
+                $('p.hidden').show()
+            });
+            $('button.click3').click(function() {
+                $('p.really').slideDown()
+                $('button.click3').hide()
+                $('button.click4').show()
+            });
+            $('button.click4').click(function() {
+                $('p.really').slideUp()
+                $('p.hidden').hide()
+                $('p.nosy').show()
+                $('button.click4').hide()
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class='sections'>
+        <h1>Click</h1>
+        <div class='content'>
+            <button class = 'click'>Click</button>
+            <button class="click3" style = "display: none">Click</button>
+            <p>Click for a magic trick!</p>
+            <button class = 'click_after' style = "display: none">Click</button>
+            <button class="click4" style = "display: none">Don't Click</button>
+        </div>
+            <div class='box1'></div>
+            <p class = "nosy" style = "display: none">Nosy little bastard, aren't you?</p>
+            <p class = "hidden" style = "display: none">This is a hidden message. Shhhhh, it's a secret.</p>
+            <p class = 'really' style = "display: none">No! Stahpp itt.</p>
+        </div>
+</body>
+
+</html>
